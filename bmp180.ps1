@@ -1,8 +1,8 @@
 try
 {
-	Add-Type -Path "$(Resolve-Path .)/bmp180-netcore.dll"
+	Add-Type -Path "$(Resolve-Path .)/bmp180-dotnet.dll"
 
-	$bmp180 =  [bmp180_netcore.BMP180]::new()
+	$bmp180 =  [bmp180dotnet.BMP180]::new()
 
 	"$($bmp180.ReadTemperature() / 10)°C"
 	"$($bmp180.ReadPressure()) bar"
